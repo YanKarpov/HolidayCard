@@ -10,7 +10,7 @@ const blowCandlesButton = document.getElementById("blowCandlesButton");
 // Массив для хранения объектов шариков
 let balloons = [];
 
-const popSound = new Audio('/sounds/balloon-pop.mp3'); 
+const popSound = new Audio('../sounds/balloon-pop.mp3'); 
 
 /**
  * Конструктор для объекта Balloon (Шарик)
