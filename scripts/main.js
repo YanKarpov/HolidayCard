@@ -11,7 +11,7 @@ const blowCandlesButton = document.getElementById("blowCandlesButton");
 let balloons = [];
 
 // Создаем аудио элемент для звука лопания
-const popSound = new Audio('sounds/balloon-pop.mp3'); // Убедитесь, что путь правильный
+const popSound = new Audio('../sounds/balloon-pop.mp3'); // Убедитесь, что путь правильный
 
 /**
  * Конструктор для объекта Balloon (Шарик)
