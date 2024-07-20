@@ -1,0 +1,150 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  overflow: hidden;
+  font-family: sans-serif;
+  background: #000;
+}
+
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.giftcontainer {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 1000px;
+  position: relative;
+  z-index: 1;
+  padding: 20px;
+}
+
+.gift {
+  position: relative;
+  width: 150px;
+  height: 100px;
+  background-color: #e9c46a;
+  margin: 10px;
+}
+
+.gift::before {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 100px;
+  background-color: #e76f51;
+  left: 62px;
+}
+
+.gift::after {
+  content: "";
+  position: absolute;
+  box-shadow: inset 0 10px rgba(0, 0, 0, 0.3);
+  width: 150px;
+  height: 100px;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+.click {
+  position: absolute;
+  background-color: #e9c46a;
+  width: 170px;
+  height: 40px;
+  top: -40px;
+  left: -10px;
+  transform-origin: bottom left;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.click::before {
+  position: absolute;
+  content: "";
+  width: 25px;
+  height: 40px;
+  background-color: #e76f51;
+  left: 72px;
+}
+
+.click::after {
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 0;
+  border-bottom: 30px solid #e76f51;
+  border-top: 30px solid #e76f51;
+  border-left: 0px solid transparent;
+  border-right: 30px solid transparent;
+  transform: rotate(-90deg);
+  left: 65px;
+  top: -47px;
+}
+
+#click1:checked + .click {
+  transform: rotate(-110deg) scale(0.85);
+}
+
+#click1:checked ~ .wishes {
+  transform: translateY(-120px);
+}
+
+#click2:checked + .click {
+  transform: rotate(-110deg) scale(0.85);
+}
+
+#click2:checked ~ .wishes {
+  transform: translateY(-120px);
+}
+
+#click3:checked + .click {
+  transform: rotate(-110deg) scale(0.85);
+}
+
+#click3:checked ~ .wishes {
+  transform: translateY(-120px);
+}
+
+.wishes {
+  position: absolute;
+  transition: 0.5s;
+  color: #fff;
+  font-size: 20px;
+  text-transform: uppercase;
+  text-align: center;
+  z-index: -1;
+  left: 10px;
+  text-shadow: 0 0 10px #020202;
+}
+
+.buttoncontainer {
+  margin-top: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.back-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #e76f51;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.back-button:hover {
+  background-color: #d65b3a;
+}
